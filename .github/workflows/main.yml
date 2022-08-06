@@ -65,7 +65,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull Lets-dancing/infra_actions
+            sudo docker pull lets-dancing/infra_actions
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 Lets-dancing/infra_actions
+            sudo docker run --rm -d -p 5000:5000 lets-dancing/infra_actions
